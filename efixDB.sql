@@ -2,10 +2,10 @@
 -- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 13-10-2019 a las 21:54:04
--- Versión del servidor: 10.4.6-MariaDB
--- Versión de PHP: 7.2.21
+-- Host: 127.0.0.1
+-- Generation Time: Oct 15, 2019 at 03:00 PM
+-- Server version: 10.4.6-MariaDB
+-- PHP Version: 7.3.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `e2`
+-- Database: `ed`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `ordenes`
+-- Table structure for table `ordenes`
 --
 
 CREATE TABLE `ordenes` (
@@ -40,13 +40,13 @@ CREATE TABLE `ordenes` (
   `diagnostico` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `presupuesto` int(10) DEFAULT NULL,
   `estado_producto` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `fecha_actualizacion` datetime NOT NULL
+  `fecha_actualizacion` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `usuarios`
+-- Table structure for table `usuarios`
 --
 
 CREATE TABLE `usuarios` (
@@ -55,37 +55,21 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Volcado de datos para la tabla `usuarios`
+-- Dumping data for table `usuarios`
 --
 
 INSERT INTO `usuarios` (`usuario`, `contraseña`) VALUES
 ('admin', 'admin1234');
 
 --
--- Índices para tablas volcadas
+-- Indexes for dumped tables
 --
 
 --
--- Indices de la tabla `ordenes`
---
-ALTER TABLE `ordenes`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `usuarios`
+-- Indexes for table `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`usuario`);
-
---
--- AUTO_INCREMENT de las tablas volcadas
---
-
---
--- AUTO_INCREMENT de la tabla `ordenes`
---
-ALTER TABLE `ordenes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
