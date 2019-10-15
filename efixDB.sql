@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 15, 2019 at 03:00 PM
+-- Generation Time: Oct 15, 2019 at 07:00 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `ed`
+-- Database: `efix`
 --
 
 -- --------------------------------------------------------
@@ -59,17 +59,34 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`usuario`, `contraseña`) VALUES
-('admin', 'admin1234');
+('admin', 'admin1234'),
+('Camila', 'Camila1234');
 
 --
 -- Indexes for dumped tables
 --
 
 --
+-- Indexes for table `ordenes`
+--
+ALTER TABLE `ordenes`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`usuario`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `ordenes`
+--
+ALTER TABLE `ordenes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
