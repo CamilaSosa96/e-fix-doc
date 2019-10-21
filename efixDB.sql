@@ -51,8 +51,8 @@ CREATE TABLE `ordenes` (
 --
 
 CREATE TABLE `usuarios` (
-  `usuario` varchar(16) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `contraseña` varchar(16) COLLATE utf8mb4_unicode_ci NOT NULL
+  `usuario` varchar(16) COLLATE utf8_bin NOT NULL,
+  `contraseña` varchar(16) COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
