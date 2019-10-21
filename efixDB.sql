@@ -60,8 +60,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`usuario`, `contraseña`) VALUES
-('admin', 'admin1234'),
-('Camila', 'Camila1234');
+('Admin', 'root'),
 
 --
 -- Indexes for dumped tables
