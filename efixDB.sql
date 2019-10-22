@@ -52,7 +52,7 @@ CREATE TABLE `ordenes` (
 
 CREATE TABLE `usuarios` (
   `usuario` varchar(16) COLLATE utf8_bin NOT NULL,
-  `contraseña` varchar(16) COLLATE utf8_bin NOT NULL
+  `contraseña` varchar(255) COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -60,7 +60,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`usuario`, `contraseña`) VALUES
-('Admin', 'root'),
+('Admin', 'dc76e9f0c0006e8f919e0c515c66dbba3982f785'),
 
 --
 -- Indexes for dumped tables
