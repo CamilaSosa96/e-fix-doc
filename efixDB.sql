@@ -47,6 +47,33 @@ CREATE TABLE `ordenes` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `preferencias`
+--
+
+CREATE TABLE `preferencias` (
+  `nombre` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
+  `telefono` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
+  `RECIBIDO` tinyint(1) NOT NULL,
+  `ESPERANDO_PRESUPUESTO` tinyint(1) NOT NULL,
+  `REPARACION` tinyint(1) NOT NULL,
+  `RETIRAR_SINARREGLO` tinyint(1) NOT NULL,
+  `REPARADO` tinyint(1) NOT NULL,
+  `CANCELADA` tinyint(1) NOT NULL,
+  `ENTREGADO` tinyint(1) NOT NULL,
+  `email_auth` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `preferencias`
+--
+
+INSERT INTO `preferencias` (`nombre`, `email`, `telefono`, `RECIBIDO`, `ESPERANDO_PRESUPUESTO`, `REPARACION`, `RETIRAR_SINARREGLO`, `REPARADO`, `CANCELADA`, `ENTREGADO`, `email_auth`) VALUES
+('', '', '', 0, 0, 0, 0, 0, 0, 0, 0);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `usuarios`
 --
 
